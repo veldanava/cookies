@@ -23,7 +23,7 @@ extract cookie data from a website with sqlite
 
 ## ♟ run:
 ```zsh
-> clone this repo
+> git clone https://github.com/veldanava/cookies.git
 > install requirement.txt
 > run python index.py
 ```
